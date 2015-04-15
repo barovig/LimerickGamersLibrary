@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF4A083C-2634-4976-8205-AE812CF545F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LimerickGamersLibrary</RootNamespace>
+    <AssemblyName>LimerickGamersLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gamepad.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Customer.cs" />
+    <Compile Include="Class\Employee.cs" />
+    <Compile Include="Class\Game.cs" />
+    <Compile Include="Class\Manager.cs" />
+    <Compile Include="Class\Model.cs" />
+    <Compile Include="Class\Order.cs" />
+    <Compile Include="Class\Person.cs" />
+    <Compile Include="Class\Serializer.cs" />
+    <Compile Include="Class\Staff.cs" />
+    <Compile Include="Class\StockItem.cs" />
+    <Compile Include="Class\Transaction.cs" />
+    <Compile Include="Forms\TransactTotalsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactTotalsReport.Designer.cs">
+      <DependentUpon>TransactTotalsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddGameForm.Designer.cs">
+      <DependentUpon>AddGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditGamesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditGamesForm.Designer.cs">
+      <DependentUpon>EditGamesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameEditForm.Designer.cs">
+      <DependentUpon>GameEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameModifyConfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameModifyConfirmDialog.Designer.cs">
+      <DependentUpon>GameModifyConfirmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProcessReturnedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProcessReturnedForm.Designer.cs">
+      <DependentUpon>ProcessReturnedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReturnItemConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReturnItemConfirmForm.Designer.cs">
+      <DependentUpon>ReturnItemConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TranscationsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TranscationsReportForm.Designer.cs">
+      <DependentUpon>TranscationsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewEditGamesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewEditGamesForm.Designer.cs">
+      <DependentUpon>ViewEditGamesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewEditStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewEditStock.Designer.cs">
+      <DependentUpon>ViewEditStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewStaff.Designer.cs">
+      <DependentUpon>ViewStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddGameForm.resx">
+      <DependentUpon>AddGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditGamesForm.resx">
+      <DependentUpon>EditGamesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameEditForm.resx">
+      <DependentUpon>GameEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameModifyConfirmDialog.resx">
+      <DependentUpon>GameModifyConfirmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProcessReturnedForm.resx">
+      <DependentUpon>ProcessReturnedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReturnItemConfirmForm.resx">
+      <DependentUpon>ReturnItemConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactTotalsReport.resx">
+      <DependentUpon>TransactTotalsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TranscationsReportForm.resx">
+      <DependentUpon>TranscationsReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewEditGamesForm.resx">
+      <DependentUpon>ViewEditGamesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewEditStock.resx">
+      <DependentUpon>ViewEditStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gamepad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\logo_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ball.png" />
+    <EmbeddedResource Include="Images\gamepad.png" />
+    <EmbeddedResource Include="Images\target.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
