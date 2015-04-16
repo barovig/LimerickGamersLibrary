@@ -3,7 +3,7 @@
 namespace LimerickGamersLibrary.Class
 {
     [Serializable]
-    class Order
+    public class Order
     {
         public string CustomerId { set; get; }
         public string StockItem { set; get; }
@@ -22,6 +22,12 @@ namespace LimerickGamersLibrary.Class
             StockItem = itemId;
             DateRented = rented;
             DateReturned = returned;
+        }
+        public Order(string custId, string itemId)
+        {
+            CustomerId = custId;
+            StockItem = itemId;
+
         }
     }
 }

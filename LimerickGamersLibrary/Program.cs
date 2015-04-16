@@ -59,6 +59,7 @@ namespace LimerickGamersLibrary
             try
             {
                 Model.CopyFromSerialized(serializer.DeserializeStatic("database.dat"));
+
                 return true;
             }
             catch(Exception)
@@ -100,9 +101,62 @@ namespace LimerickGamersLibrary
             for (int i = 1; i < fileLines.Count(); i++)
             {
                 string[] lineItems = fileLines[i].Split(',');
-                Game game = new Game(lineItems[0], lineItems[1], lineItems[2], lineItems[3], lineItems[4], lineItems[5], lineItems[6]);
+                Game game = new Game(lineItems[0], lineItems[1], lineItems[2], lineItems[3], lineItems[5], lineItems[6], (EsrbRating)Enum.Parse(typeof(EsrbRating),lineItems[4]));
                 Model.gameList.Add(game);
             }
+        }
+        public static void ReadOrders(string fileName)
+        {
+            string[] fileLines = File.ReadAllLines(fileName);
+
+            for (int i = 0; i < fileLines.Count(); i++)
+            {
+                string[] lineItems = fileLines[i].Split(',');
+                
+                Order order = new Order(lineItems[0],lineItems[1],ProcessShortDate(lineItems[2]), ProcessShortDate(lineItems[3]));
+                Model.ordersList.Add(order);
+            }
+        }
+        public static void ReadItems(string fileName)
+        {
+            string[] fileLines = File.ReadAllLines(fileName);
+
+            for (int i = 0; i < fileLines.Count(); i++)
+            {
+                string[] lineItems = fileLines[i].Split(',');
+                StockItem item = new StockItem(lineItems[0], lineItems[1], Convert.ToBoolean(lineItems[2]));
+                Model.stockList.Add(item);
+            }
+        }
+        public static void ReadTransactions(string fileName)
+        {
+            string[] fileLines = File.ReadAllLines(fileName);
+
+            for (int i = 0; i < fileLines.Count(); i++)
+            {
+                string[] lineItems = fileLines[i].Split(',');
+                Transaction transact = new Transaction(lineItems[0], double.Parse(lineItems[1]), ProcessShortDate(lineItems[2]), (AccountTransaction)Enum.Parse(typeof(AccountTransaction), lineItems[3])); 
+                Model.transactList.Add(transact);
+            }
+        }
+
+        public static DateTime ProcessShortDate(string date)
+        {
+            string[] dateItems = date.Split('/');
+            int year = int.Parse(dateItems[2]);
+            int month = int.Parse(dateItems[0]);
+            int day = int.Parse(dateItems[1]);
+            return new DateTime(year, month, day);
+        }
+
+        public static void ReadCsvFiles()
+        {
+            ReadOrders("Orders.csv");
+            ReadTransactions("Transactions.csv");
+            ReadItems("Items.csv");
+            ReadCustomers("Customers.csv");
+            ReadGames("Games.csv");
+            ReadStaff("Staff.csv");
         }
     }
 

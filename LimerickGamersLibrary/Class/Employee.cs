@@ -9,6 +9,10 @@ namespace LimerickGamersLibrary.Class
         public string EmployeeId { set; get; }
         public string EmployeePswd { set; get; }
 
+        public Employee()
+        {
+        }
+
         public Employee(string name, string surname, string id)
             : base(name, surname)
         {
@@ -34,6 +38,9 @@ namespace LimerickGamersLibrary.Class
             return string.Format("{0} {1} {2} ", this.Name, this.Surname, this.EmployeeId);
         }
 
-       
+        internal string[] ToStringArray()
+        {
+            return new string[] { Name, Surname, EmployeeId, Address, PhoneNum, Email };
+        }
     }
 }

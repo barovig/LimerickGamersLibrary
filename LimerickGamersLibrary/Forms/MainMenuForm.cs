@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using LimerickGamersLibrary.Class;
-using OoProject;
+using LimerickGamersLibrary;
 
 namespace LimerickGamersLibrary.Forms
 {
@@ -59,17 +59,18 @@ namespace LimerickGamersLibrary.Forms
 
         private void enquireAvailableBtn_Click(object sender, EventArgs e)
         {
+            ViewAvailableGames viewAvailable = new ViewAvailableGames();
+            viewAvailable.Show();
         }
 
         private void staffEditToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AddStaff addStaffForm = new AddStaff();
-            addStaffForm.Show();
+
         }
 
         private void staffViewToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            ViewStaff viewStaff = new ViewStaff();
+            StaffDetails viewStaff = new StaffDetails();
             viewStaff.Show();
         }
 
@@ -100,6 +101,42 @@ namespace LimerickGamersLibrary.Forms
         private void transacrReportBtn_Click(object sender, EventArgs e)
         {
             accountTransactionsToolStripMenuItem_Click(sender, e);
+        }
+
+        private void overdueReportBtn_Click(object sender, EventArgs e)
+        {
+            Overdue overdueForm = new Overdue();
+            overdueForm.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteStaff deleteStaff = new DeleteStaff();
+            deleteStaff.ShowDialog();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStaff addStaffForm = new AddStaff();
+            addStaffForm.ShowDialog();
+        }
+
+        private void membersEditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCustomerForm editCustomerForm = new EditCustomerForm();
+            editCustomerForm.Show();
+        }
+
+        private void customersViewToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ViewCustomerForm viewEditCustomer = new ViewCustomerForm();
+            viewEditCustomer.Show();
+        }
+
+        private void issueGamesBtn_Click(object sender, EventArgs e)
+        {
+            IssueGameForm issueGameForm = new IssueGameForm();
+            issueGameForm.Show();
         }
     }
 }

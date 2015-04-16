@@ -4,7 +4,7 @@ using System;
 namespace LimerickGamersLibrary.Class
 {
     [Serializable]
-    class Customer : Person
+    public class Customer : Person
     {
 
         public string CustomerId { set; get; }
@@ -33,6 +33,10 @@ namespace LimerickGamersLibrary.Class
         public override string showDetails()
         {
             return string.Format("{0} {1} {2}  ", this.Name, this.Surname, this.CustomerId);
+        }
+        public string[] ToStringArray()
+        {
+            return new string[] { CustomerId, Name, Surname, Address, Email, PhoneNum.ToString() };
         }
     }
 }

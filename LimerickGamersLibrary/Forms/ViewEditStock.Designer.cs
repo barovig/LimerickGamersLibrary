@@ -38,8 +38,6 @@
             this.stockItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.viewStockToolStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.gamesListView = new System.Windows.Forms.ListView();
             this.gameIdCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gameNameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,6 +56,8 @@
             this.addStockItemBtn = new System.Windows.Forms.Button();
             this.deleteStockItemBtn = new System.Windows.Forms.Button();
             this.toggleRentBtn = new System.Windows.Forms.Button();
+            this.viewStockToolStrip = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.viewStockMenuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -135,22 +135,6 @@
             this.stockToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.stockToolStripMenuItem.Text = "Stock";
             this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewStockToolStrip});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 451);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(842, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // viewStockToolStrip
-            // 
-            this.viewStockToolStrip.Name = "viewStockToolStrip";
-            this.viewStockToolStrip.Size = new System.Drawing.Size(149, 17);
-            this.viewStockToolStrip.Text = "Select game to view its stock.";
             // 
             // gamesListView
             // 
@@ -284,6 +268,7 @@
             this.addStockItemBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.addStockItemBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.addStockItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addStockItemBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.addStockItemBtn.Location = new System.Drawing.Point(742, 213);
             this.addStockItemBtn.Name = "addStockItemBtn";
             this.addStockItemBtn.Size = new System.Drawing.Size(75, 50);
@@ -301,6 +286,7 @@
             this.deleteStockItemBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.deleteStockItemBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.deleteStockItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteStockItemBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.deleteStockItemBtn.Location = new System.Drawing.Point(742, 307);
             this.deleteStockItemBtn.Name = "deleteStockItemBtn";
             this.deleteStockItemBtn.Size = new System.Drawing.Size(75, 50);
@@ -318,6 +304,7 @@
             this.toggleRentBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.toggleRentBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.toggleRentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleRentBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.toggleRentBtn.Location = new System.Drawing.Point(742, 119);
             this.toggleRentBtn.Name = "toggleRentBtn";
             this.toggleRentBtn.Size = new System.Drawing.Size(75, 50);
@@ -327,6 +314,23 @@
             this.toggleRentBtn.Click += new System.EventHandler(this.toggleRentBtn_Click);
             this.toggleRentBtn.MouseLeave += new System.EventHandler(this.toggleRentBtn_MouseLeave);
             this.toggleRentBtn.MouseHover += new System.EventHandler(this.toggleRentBtn_MouseHover);
+            // 
+            // viewStockToolStrip
+            // 
+            this.viewStockToolStrip.Enabled = false;
+            this.viewStockToolStrip.Name = "viewStockToolStrip";
+            this.viewStockToolStrip.Size = new System.Drawing.Size(149, 17);
+            this.viewStockToolStrip.Text = "Select game to view its stock.";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewStockToolStrip});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 451);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(842, 22);
+            this.statusStrip1.TabIndex = 4;
             // 
             // ViewEditStock
             // 
@@ -343,6 +347,7 @@
             this.Controls.Add(this.gamesListView);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.viewStockMenuStrip);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(850, 500);
             this.Name = "ViewEditStock";
@@ -368,7 +373,6 @@
         private System.Windows.Forms.ToolStripMenuItem stockItemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ListView gamesListView;
         private System.Windows.Forms.ColumnHeader gameIdCol;
         private System.Windows.Forms.ColumnHeader gameNameCol;
@@ -382,11 +386,12 @@
         private System.Windows.Forms.ColumnHeader itemIdCol;
         private System.Windows.Forms.ColumnHeader itemGameId;
         private System.Windows.Forms.ColumnHeader onRentCol;
-        private System.Windows.Forms.ToolStripStatusLabel viewStockToolStrip;
         private System.Windows.Forms.Label gamesLibraryLbl;
         private System.Windows.Forms.Label stockLbl;
         private System.Windows.Forms.Button addStockItemBtn;
         private System.Windows.Forms.Button deleteStockItemBtn;
         private System.Windows.Forms.Button toggleRentBtn;
+        private System.Windows.Forms.ToolStripStatusLabel viewStockToolStrip;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

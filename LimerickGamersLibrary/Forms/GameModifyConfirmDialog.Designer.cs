@@ -70,6 +70,7 @@
             // 
             // ratingTbox
             // 
+            this.ratingTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.ratingTbox.Location = new System.Drawing.Point(170, 238);
             this.ratingTbox.Name = "ratingTbox";
             this.ratingTbox.ReadOnly = true;
@@ -111,6 +112,7 @@
             // 
             // genreTBox
             // 
+            this.genreTBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.genreTBox.Location = new System.Drawing.Point(170, 126);
             this.genreTBox.Name = "genreTBox";
             this.genreTBox.ReadOnly = true;
@@ -130,6 +132,7 @@
             // 
             // yearTbox
             // 
+            this.yearTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.yearTbox.Location = new System.Drawing.Point(170, 210);
             this.yearTbox.Name = "yearTbox";
             this.yearTbox.ReadOnly = true;
@@ -139,6 +142,7 @@
             // 
             // pubTbox
             // 
+            this.pubTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.pubTbox.Location = new System.Drawing.Point(170, 182);
             this.pubTbox.Name = "pubTbox";
             this.pubTbox.ReadOnly = true;
@@ -148,6 +152,7 @@
             // 
             // devTbox
             // 
+            this.devTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.devTbox.Location = new System.Drawing.Point(170, 154);
             this.devTbox.Name = "devTbox";
             this.devTbox.ReadOnly = true;
@@ -157,6 +162,7 @@
             // 
             // platformTbox
             // 
+            this.platformTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.platformTbox.Location = new System.Drawing.Point(170, 98);
             this.platformTbox.Name = "platformTbox";
             this.platformTbox.ReadOnly = true;
@@ -166,6 +172,7 @@
             // 
             // gameTbox
             // 
+            this.gameTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.gameTbox.Location = new System.Drawing.Point(170, 70);
             this.gameTbox.Name = "gameTbox";
             this.gameTbox.ReadOnly = true;

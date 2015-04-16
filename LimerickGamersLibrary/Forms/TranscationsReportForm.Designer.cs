@@ -35,6 +35,7 @@
             this.saveDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewTotalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.transactReportLbl = new System.Windows.Forms.Label();
             this.transactListView = new System.Windows.Forms.ListView();
             this.custIdCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,7 +56,6 @@
             this.typeLbl = new System.Windows.Forms.Label();
             this.custSurnameLbl = new System.Windows.Forms.Label();
             this.custNameLbl = new System.Windows.Forms.Label();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.transactReportMenuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.filterOptionsGBox.SuspendLayout();
@@ -106,12 +106,19 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
             this.statusStrip.Location = new System.Drawing.Point(0, 451);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(842, 22);
             this.statusStrip.TabIndex = 5;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(109, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // transactReportLbl
             // 
@@ -126,6 +133,8 @@
             // 
             // transactListView
             // 
+            this.transactListView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.transactListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.custIdCol,
             this.nameCol,
@@ -176,6 +185,8 @@
             // 
             // filterOptionsGBox
             // 
+            this.filterOptionsGBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.filterOptionsGBox.Controls.Add(this.filterBtn);
             this.filterOptionsGBox.Controls.Add(this.datesGBox);
             this.filterOptionsGBox.Controls.Add(this.typeCBox);
@@ -296,12 +307,6 @@
             this.custNameLbl.Size = new System.Drawing.Size(85, 13);
             this.custNameLbl.TabIndex = 0;
             this.custNameLbl.Text = "Customer Name:";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(109, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // TransactionsReportForm
             // 

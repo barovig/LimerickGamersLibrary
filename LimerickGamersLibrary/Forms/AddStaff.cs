@@ -1,8 +1,15 @@
-﻿using System;
+﻿using LimerickGamersLibrary.Class;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using LimerickGamersLibrary.Class;
 
-namespace LimerickGamersLibrary.Forms
+namespace LimerickGamersLibrary
 {
     public partial class AddStaff : Form
     {
@@ -25,14 +32,17 @@ namespace LimerickGamersLibrary.Forms
         {
             string name = nameTbox.Text;
             string lastName = surnameTbox.Text;
-            string id = Model.GenerateEmployeeId().ToString();
+            string address = Address.Text;
+
+            string phonenumber = PhoneNumber.Text;
+            string email = Email.Text;
 
             // If manager selected
             if (managerRBtn.Checked)
-                Model.employeeList.Add(new Manager(name, lastName, id));
+                Model.employeeList.Add(new Manager(name, lastName, address, phonenumber, email));
             else
             {
-                Model.employeeList.Add(new Staff(name, lastName, id));
+                Model.employeeList.Add(new Staff(name, lastName, address, phonenumber, email));
             }
 
 

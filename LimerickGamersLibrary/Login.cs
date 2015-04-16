@@ -24,14 +24,22 @@ namespace LimerickGamersLibrary
             // If database failed to open, add staff in order to proceed
             if (!loaded)
             {
-                AddStaff addStaff = new AddStaff();
-                addStaff.ShowDialog();
+                MessageBox.Show("Database failed to load. Please log in as \"admin\".");
             }
 
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+
+            if (idTbox.Text == "admin")
+            {
+                InitialManagerForm form = new InitialManagerForm();
+                form.ShowDialog();
+
+                return;
+            }
+
             String login = idTbox.Text;
             String password = pswdTbox.Text;
             // Search employees collection 
@@ -58,7 +66,7 @@ namespace LimerickGamersLibrary
 
         private void idTbox_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Return)
+            if (e.KeyCode == Keys.Return)
                 loginBtn_Click(sender, e);
         }
 

@@ -14,6 +14,11 @@ namespace LimerickGamersLibrary.Class
             ItemId = id; GameId = gameId;
             OnRent = false;
         }
+        public StockItem(string id, string gameId, bool onRent)
+        {
+            ItemId = id; GameId = gameId;
+            OnRent = onRent;
+        }
         public StockItem(string gameId)
         {
             ItemId = Model.GenerateStockItemId();

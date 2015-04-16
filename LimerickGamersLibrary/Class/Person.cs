@@ -25,6 +25,10 @@ namespace LimerickGamersLibrary.Class
             PhoneNum = phone;
             Email = email;
         }
+        protected Person()
+        {
+
+        }
         public abstract string showDetails();
     }
 }

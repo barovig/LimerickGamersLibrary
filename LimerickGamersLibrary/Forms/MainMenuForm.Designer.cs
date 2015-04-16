@@ -38,6 +38,8 @@
             this.gamesEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membersEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staffEditToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gamesViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customersViewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,22 +125,40 @@
             // gamesEditToolStripMenuItem
             // 
             this.gamesEditToolStripMenuItem.Name = "gamesEditToolStripMenuItem";
-            this.gamesEditToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.gamesEditToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gamesEditToolStripMenuItem.Text = "&Games";
             this.gamesEditToolStripMenuItem.Click += new System.EventHandler(this.gamesEditToolStripMenuItem_Click);
             // 
             // membersEditToolStripMenuItem
             // 
             this.membersEditToolStripMenuItem.Name = "membersEditToolStripMenuItem";
-            this.membersEditToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.membersEditToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.membersEditToolStripMenuItem.Text = "&Members";
+            this.membersEditToolStripMenuItem.Click += new System.EventHandler(this.membersEditToolStripMenuItem_Click);
             // 
             // staffEditToolStripMenuItem1
             // 
+            this.staffEditToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteToolStripMenuItem,
+            this.addToolStripMenuItem});
             this.staffEditToolStripMenuItem1.Name = "staffEditToolStripMenuItem1";
-            this.staffEditToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+            this.staffEditToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.staffEditToolStripMenuItem1.Text = "&Staff";
             this.staffEditToolStripMenuItem1.Click += new System.EventHandler(this.staffEditToolStripMenuItem1_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -160,8 +180,9 @@
             // customersViewToolStripMenuItem1
             // 
             this.customersViewToolStripMenuItem1.Name = "customersViewToolStripMenuItem1";
-            this.customersViewToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+            this.customersViewToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.customersViewToolStripMenuItem1.Text = "&Members";
+            this.customersViewToolStripMenuItem1.Click += new System.EventHandler(this.customersViewToolStripMenuItem1_Click);
             // 
             // staffViewToolStripMenuItem2
             // 
@@ -287,6 +308,7 @@
             this.issueGamesBtn.TabIndex = 1;
             this.issueGamesBtn.Text = "Issue Games";
             this.issueGamesBtn.UseVisualStyleBackColor = false;
+            this.issueGamesBtn.Click += new System.EventHandler(this.issueGamesBtn_Click);
             // 
             // enquireAvailableBtn
             // 
@@ -296,6 +318,7 @@
             this.enquireAvailableBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.enquireAvailableBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.enquireAvailableBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enquireAvailableBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.enquireAvailableBtn.Location = new System.Drawing.Point(20, 66);
             this.enquireAvailableBtn.Name = "enquireAvailableBtn";
             this.enquireAvailableBtn.Size = new System.Drawing.Size(100, 66);
@@ -353,6 +376,7 @@
             this.overdueReportBtn.TabIndex = 2;
             this.overdueReportBtn.Text = "Overdue Games Report";
             this.overdueReportBtn.UseVisualStyleBackColor = false;
+            this.overdueReportBtn.Click += new System.EventHandler(this.overdueReportBtn_Click);
             // 
             // catalogReportBtn
             // 
@@ -458,5 +482,7 @@
         private System.Windows.Forms.Button catalogReportBtn;
         private System.Windows.Forms.Button editStaffBtn;
         private System.Windows.Forms.PictureBox logoPicBox;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
     }
 }

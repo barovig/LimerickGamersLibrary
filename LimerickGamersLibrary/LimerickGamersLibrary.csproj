@@ -54,15 +54,106 @@
     <Compile Include="Class\Model.cs" />
     <Compile Include="Class\Order.cs" />
     <Compile Include="Class\Person.cs" />
+    <Compile Include="Class\ReserveOrder.cs" />
     <Compile Include="Class\Serializer.cs" />
     <Compile Include="Class\Staff.cs" />
     <Compile Include="Class\StockItem.cs" />
     <Compile Include="Class\Transaction.cs" />
+    <Compile Include="Forms\AddCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCustomerForm.Designer.cs">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfirmIssueGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfirmIssueGame.Designer.cs">
+      <DependentUpon>ConfirmIssueGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerEditForm.Designer.cs">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerModifyForm.Designer.cs">
+      <DependentUpon>CustomerModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteStaff.Designer.cs">
+      <DependentUpon>DeleteStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditCustomerForm.Designer.cs">
+      <DependentUpon>EditCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditStaff.Designer.cs">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameReportForm.Designer.cs">
+      <DependentUpon>GameReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InitialManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InitialManagerForm.Designer.cs">
+      <DependentUpon>InitialManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssueGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IssueGameForm.Designer.cs">
+      <DependentUpon>IssueGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Overdue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Overdue.Designer.cs">
+      <DependentUpon>Overdue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReserveID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReserveID.Designer.cs">
+      <DependentUpon>ReserveID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffDetails.Designer.cs">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TransactTotalsReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\TransactTotalsReport.Designer.cs">
       <DependentUpon>TransactTotalsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewAvailableGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewAvailableGames.Designer.cs">
+      <DependentUpon>ViewAvailableGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewCustomerForm.Designer.cs">
+      <DependentUpon>ViewCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -136,19 +227,37 @@
     <Compile Include="Forms\ViewEditStock.Designer.cs">
       <DependentUpon>ViewEditStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ViewStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ViewStaff.Designer.cs">
-      <DependentUpon>ViewStaff.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddCustomerForm.resx">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddGameForm.resx">
       <DependentUpon>AddGameForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfirmIssueGame.resx">
+      <DependentUpon>ConfirmIssueGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerEditForm.resx">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerModifyForm.resx">
+      <DependentUpon>CustomerModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteStaff.resx">
+      <DependentUpon>DeleteStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditCustomerForm.resx">
+      <DependentUpon>EditCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditGamesForm.resx">
       <DependentUpon>EditGamesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditStaff.resx">
+      <DependentUpon>EditStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GameEditForm.resx">
       <DependentUpon>GameEditForm.cs</DependentUpon>
@@ -156,17 +265,41 @@
     <EmbeddedResource Include="Forms\GameModifyConfirmDialog.resx">
       <DependentUpon>GameModifyConfirmDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameReportForm.resx">
+      <DependentUpon>GameReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InitialManagerForm.resx">
+      <DependentUpon>InitialManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IssueGameForm.resx">
+      <DependentUpon>IssueGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Overdue.resx">
+      <DependentUpon>Overdue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProcessReturnedForm.resx">
       <DependentUpon>ProcessReturnedForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReserveID.resx">
+      <DependentUpon>ReserveID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReturnItemConfirmForm.resx">
       <DependentUpon>ReturnItemConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffDetails.resx">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactTotalsReport.resx">
       <DependentUpon>TransactTotalsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TranscationsReportForm.resx">
       <DependentUpon>TranscationsReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewAvailableGames.resx">
+      <DependentUpon>ViewAvailableGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewCustomerForm.resx">
+      <DependentUpon>ViewCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewEditGamesForm.resx">
       <DependentUpon>ViewEditGamesForm.cs</DependentUpon>

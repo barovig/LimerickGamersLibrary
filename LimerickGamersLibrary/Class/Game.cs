@@ -6,7 +6,7 @@ namespace LimerickGamersLibrary.Class
     [Serializable]
     public enum EsrbRating
     {
-        Ec,         //Early Childhood
+        EC,         //Early Childhood
         E,          //Everyone
         E10Plus,    //Everyone 10+
         T,          //Teen
@@ -49,7 +49,7 @@ namespace LimerickGamersLibrary.Class
             switch (rating)
             {
                 case "Ec":
-                    Rating = EsrbRating.Ec;
+                    Rating = EsrbRating.EC;
                     break;
                 case "E":
                     Rating = EsrbRating.E;

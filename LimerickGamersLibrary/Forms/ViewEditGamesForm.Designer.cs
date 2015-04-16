@@ -139,7 +139,7 @@
             // ratingCol
             // 
             this.ratingCol.Text = "ESRB Rating";
-            this.ratingCol.Width = 82;
+            this.ratingCol.Width = 84;
             // 
             // copiesCol
             // 
@@ -233,6 +233,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabelDoubleClick});
             this.statusStrip1.Location = new System.Drawing.Point(0, 451);
