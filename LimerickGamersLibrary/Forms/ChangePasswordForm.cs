@@ -44,6 +44,7 @@ namespace LimerickGamersLibrary.Forms
                 string empId = Model.employeeList.Find(emp => emp.EmployeePswd == oldPswd).EmployeeId;
                 Model.employeeList.Find(emp => emp.EmployeeId == empId).EmployeePswd = newPswd;
                 MessageBox.Show("Password Updated!");
+                this.Close();
             }
 
         }
