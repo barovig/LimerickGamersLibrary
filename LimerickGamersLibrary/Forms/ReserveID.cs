@@ -111,7 +111,6 @@ namespace LimerickGamersLibrary
             catch (Exception exc)
             {
                 // Do nothing
-                MessageBox.Show("Error: {0}", exc.Message);
             }
            
 
