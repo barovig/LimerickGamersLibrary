@@ -150,6 +150,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChangePasswordForm";
+            this.ShowInTaskbar = false;
             this.Text = "Change Password";
             this.ResumeLayout(false);
             this.PerformLayout();
