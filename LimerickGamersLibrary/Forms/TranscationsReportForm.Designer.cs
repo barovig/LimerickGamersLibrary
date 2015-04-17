@@ -283,7 +283,7 @@
             // typeLbl
             // 
             this.typeLbl.AutoSize = true;
-            this.typeLbl.Location = new System.Drawing.Point(22, 142);
+            this.typeLbl.Location = new System.Drawing.Point(16, 132);
             this.typeLbl.Name = "typeLbl";
             this.typeLbl.Size = new System.Drawing.Size(93, 13);
             this.typeLbl.TabIndex = 2;
@@ -292,7 +292,7 @@
             // custSurnameLbl
             // 
             this.custSurnameLbl.AutoSize = true;
-            this.custSurnameLbl.Location = new System.Drawing.Point(16, 96);
+            this.custSurnameLbl.Location = new System.Drawing.Point(10, 91);
             this.custSurnameLbl.Name = "custSurnameLbl";
             this.custSurnameLbl.Size = new System.Drawing.Size(99, 13);
             this.custSurnameLbl.TabIndex = 1;
@@ -301,7 +301,7 @@
             // custNameLbl
             // 
             this.custNameLbl.AutoSize = true;
-            this.custNameLbl.Location = new System.Drawing.Point(30, 50);
+            this.custNameLbl.Location = new System.Drawing.Point(24, 50);
             this.custNameLbl.Name = "custNameLbl";
             this.custNameLbl.Size = new System.Drawing.Size(85, 13);
             this.custNameLbl.TabIndex = 0;
