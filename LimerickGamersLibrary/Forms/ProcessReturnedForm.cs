@@ -134,40 +134,49 @@ namespace LimerickGamersLibrary.Forms
 
         private void returnGameBtn_Click(object sender, EventArgs e)
         {
-            // Item id:
-            string itemId = gamesListView.SelectedItems[0].SubItems[0].Text;
-            // Date string
-            string rentDateString = gamesListView.SelectedItems[0].SubItems[4].Text;
-            // Retrieve order for processing
-            Order processOrder = Model.ordersList.Find(
-                order => order.StockItem == itemId && order.DateRented.ToShortDateString() == rentDateString);
-
-            // Get day difference as string
-            string dayDiffString = (DateTime.Now - processOrder.DateRented).TotalDays.ToString().Split('.')[0];
-            // Parse to int
-            int dayDiff = int.Parse(dayDiffString);
-
-            // Create orderInfo List<> here
-            List<string> orderInfo = new List<string>();
-            foreach (ListViewItem.ListViewSubItem item in gamesListView.SelectedItems[0].SubItems)
+            try
             {
-                orderInfo.Add(item.Text);
+                // Item id:
+                string itemId = gamesListView.SelectedItems[0].SubItems[0].Text;
+                // Date string
+                string rentDateString = gamesListView.SelectedItems[0].SubItems[4].Text;
+
+                // Retrieve order for processing
+                Order processOrder = Model.ordersList.Find(
+                    order => order.StockItem == itemId && order.DateRented.ToShortDateString() == rentDateString);
+
+                // Get day difference as string
+                string dayDiffString = (DateTime.Now - processOrder.DateRented).TotalDays.ToString().Split('.')[0];
+                // Parse to int
+                int dayDiff = int.Parse(dayDiffString);
+
+                // Create orderInfo List<> here
+                List<string> orderInfo = new List<string>();
+                foreach (ListViewItem.ListViewSubItem item in gamesListView.SelectedItems[0].SubItems)
+                {
+                    orderInfo.Add(item.Text);
+                }
+                // Call confirmation forms 
+                ReturnItemConfirmForm returnConfirmForm;
+
+                returnConfirmForm = dayDiff > 3 ? new ReturnItemConfirmForm(orderInfo, dayDiff) : new ReturnItemConfirmForm(orderInfo);
+
+                returnConfirmForm.ShowDialog();
+
+                // Set order to returned if DIALOG RESULT STATUS OK
+                if (returnConfirmForm.DialogResult == DialogResult.OK)
+                {
+                    Model.ordersList.Find(
+                        order => order.StockItem == itemId && order.DateRented.ToShortDateString() == rentDateString).DateReturned = DateTime.Now;
+                    // Change OnRent to false
+                    Model.stockList.Find(stock => stock.ItemId == itemId).OnRent = false;
+                }
             }
-            // Call confirmation forms 
-            ReturnItemConfirmForm returnConfirmForm;
-
-            returnConfirmForm = dayDiff > 3 ? new ReturnItemConfirmForm(orderInfo, dayDiff) : new ReturnItemConfirmForm(orderInfo);
-
-            returnConfirmForm.ShowDialog();
-
-            // Set order to returned if DIALOG RESULT STATUS OK
-            if (returnConfirmForm.DialogResult == DialogResult.OK)
+            catch (Exception)
             {
-                Model.ordersList.Find(
-                    order => order.StockItem == itemId && order.DateRented.ToShortDateString() == rentDateString).DateReturned = DateTime.Now;
-                // Change OnRent to false
-                Model.stockList.Find(stock => stock.ItemId == itemId).OnRent = false;
+                MessageBox.Show("Please select customer.");
             }
+
 
             PopulateViewFromOrderList();
 
