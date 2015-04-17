@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using LimerickGamersLibrary.Class;
 using LimerickGamersLibrary;
@@ -8,7 +9,6 @@ namespace LimerickGamersLibrary.Forms
     public partial class MainMenuForm : Form
     {
         private Form LoginForm { set; get; }
-
         public MainMenuForm(Form parent)
         {
             // set parent form (login) reference
@@ -33,7 +33,6 @@ namespace LimerickGamersLibrary.Forms
                 // Disable Report menu
                 MenuStrip.Items.RemoveByKey("reportToolStripMenuItem");
             }
-
         }
 
         private void logoutToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -170,6 +169,22 @@ namespace LimerickGamersLibrary.Forms
         private void MainMenuForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoginForm.Show();
+        }
+
+        private void signedInLabel_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm();
+            changePasswordForm.ShowDialog();
+        }
+
+        private void signedInLabel_MouseEnter(object sender, EventArgs e)
+        {
+            signedInLabel.ForeColor = Color.FromArgb(145, 153, 245);
+        }
+
+        private void signedInLabel_MouseLeave(object sender, EventArgs e)
+        {
+            signedInLabel.ForeColor = Color.FromArgb(4, 101, 9);
         }
     }
 }

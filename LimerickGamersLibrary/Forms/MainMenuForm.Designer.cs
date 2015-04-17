@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +63,7 @@
             this.catalogReportBtn = new System.Windows.Forms.Button();
             this.editStaffBtn = new System.Windows.Forms.Button();
             this.logoPicBox = new System.Windows.Forms.PictureBox();
+            this.changePswdTip = new System.Windows.Forms.ToolTip(this.components);
             this.MenuStrip.SuspendLayout();
             this.manMenuGBox.SuspendLayout();
             this.managerMenuGbox.SuspendLayout();
@@ -231,6 +233,7 @@
             // 
             // signedInLabel
             // 
+            this.signedInLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.signedInLabel.AutoSize = true;
             this.signedInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signedInLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
@@ -239,6 +242,10 @@
             this.signedInLabel.Size = new System.Drawing.Size(61, 13);
             this.signedInLabel.TabIndex = 2;
             this.signedInLabel.Text = "username";
+            this.changePswdTip.SetToolTip(this.signedInLabel, "Click to change your password");
+            this.signedInLabel.Click += new System.EventHandler(this.signedInLabel_Click);
+            this.signedInLabel.MouseEnter += new System.EventHandler(this.signedInLabel_MouseEnter);
+            this.signedInLabel.MouseLeave += new System.EventHandler(this.signedInLabel_MouseLeave);
             // 
             // greetingLbl
             // 
@@ -273,6 +280,7 @@
             this.processReturnedBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.processReturnedBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.processReturnedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.processReturnedBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.processReturnedBtn.Location = new System.Drawing.Point(380, 66);
             this.processReturnedBtn.Name = "processReturnedBtn";
             this.processReturnedBtn.Size = new System.Drawing.Size(100, 66);
@@ -332,6 +340,9 @@
             // 
             // managerMenuGbox
             // 
+            this.managerMenuGbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.managerMenuGbox.Controls.Add(this.transacrReportBtn);
             this.managerMenuGbox.Controls.Add(this.overdueReportBtn);
             this.managerMenuGbox.Controls.Add(this.catalogReportBtn);
@@ -419,6 +430,9 @@
             // 
             // logoPicBox
             // 
+            this.logoPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.logoPicBox.BackColor = System.Drawing.Color.Transparent;
             this.logoPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.logoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPicBox.Image")));
@@ -440,6 +454,7 @@
             this.Controls.Add(this.greetingLbl);
             this.Controls.Add(this.signedInLabel);
             this.Controls.Add(this.MenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "MainMenuForm";
@@ -490,5 +505,6 @@
         private System.Windows.Forms.PictureBox logoPicBox;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolTip changePswdTip;
     }
 }
