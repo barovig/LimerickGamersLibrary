@@ -138,5 +138,33 @@ namespace LimerickGamersLibrary.Forms
             IssueGameForm issueGameForm = new IssueGameForm();
             issueGameForm.Show();
         }
+
+        private void editStaffBtn_Click(object sender, EventArgs e)
+        {
+            StaffDetails viewStaff = new StaffDetails();
+            viewStaff.Show();
+        }
+
+        private void catalogReportBtn_Click(object sender, EventArgs e)
+        {
+            GameReportForm gameReport = new GameReportForm();
+            gameReport.Show();
+        }
+
+        private void overdueGamesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            overdueReportBtn_Click(sender, e);
+        }
+
+        private void gameCatalogueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            catalogReportBtn_Click(sender, e);
+        }
+
+        private void reserveGanesBtn_Click(object sender, EventArgs e)
+        {
+            ReserveID reserveGame = new ReserveID();
+            reserveGame.Show();
+        }
     }
 }

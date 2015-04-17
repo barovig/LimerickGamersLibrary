@@ -38,6 +38,8 @@ namespace LimerickGamersLibrary.Class
                     Customer newCustomer = new Customer(customerNameTB.Text, customerSurnameTB.Text, customerAddressTB.Text, customerEmailTB.Text, customerMobileTB.Text);
                     // Modify this game
                     Model.customerList.Add(newCustomer);
+                    // Pay membership fee
+                    Model.transactList.Add(new Transaction(newCustomer.CustomerId, Fees.MembershipFee, DateTime.Now, AccountTransaction.MembershipFee));
                     this.DialogResult = DialogResult.OK;
                 }
             }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameReportForm));
             this.filterOptionsGBox = new System.Windows.Forms.GroupBox();
             this.ratingCBox = new System.Windows.Forms.ComboBox();
             this.yearCBox = new System.Windows.Forms.ComboBox();
@@ -317,6 +318,7 @@
             this.Controls.Add(this.gamesLibraryLbl);
             this.Controls.Add(this.gamesListView);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(850, 500);
             this.Name = "GameReportForm";
             this.Text = "Game Report Form";

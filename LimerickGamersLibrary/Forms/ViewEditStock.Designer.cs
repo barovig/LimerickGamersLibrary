@@ -318,6 +318,7 @@
             // viewStockToolStrip
             // 
             this.viewStockToolStrip.Enabled = false;
+            this.viewStockToolStrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.viewStockToolStrip.Name = "viewStockToolStrip";
             this.viewStockToolStrip.Size = new System.Drawing.Size(149, 17);
             this.viewStockToolStrip.Text = "Select game to view its stock.";

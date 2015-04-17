@@ -99,7 +99,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Overdue";
-            this.Text = "Overdue";
+            this.Text = "Games Overdue";
             this.ResumeLayout(false);
             this.PerformLayout();
 

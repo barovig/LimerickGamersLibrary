@@ -187,6 +187,7 @@
             this.Controls.Add(this.memberFeeLbl);
             this.Controls.Add(this.timePeriodGBox);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TransactTotalsReport";
             this.ShowInTaskbar = false;
             this.Text = "Transactions Totals";

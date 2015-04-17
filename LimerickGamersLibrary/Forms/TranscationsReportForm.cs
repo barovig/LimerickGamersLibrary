@@ -10,8 +10,6 @@ namespace LimerickGamersLibrary.Forms
     {
         public TransactionsReportForm()
         {
-            // For testing add some transactions
-            AddTestTransacts();
 
             InitializeComponent();
 
@@ -47,22 +45,17 @@ namespace LimerickGamersLibrary.Forms
             typeCBox.DataSource = types;
             // Get oldest and newest dates from Model.transactList
             DateTime oldest = new DateTime();
-            oldest = Model.transactList.Min(transaction => transaction.TransactionDate);
+            try
+            {
+                oldest = Model.transactList.Min(transaction => transaction.TransactionDate);
+            }
+            catch (Exception)
+            {
+                oldest = new DateTime(1900, 1, 1);
+            }
             // Set start and end dates to oldest and newest
             startDatePicker.Value = oldest;
             endDatePicker.Value = DateTime.Now;
-        }
-
-        private void AddTestTransacts()
-        {
-            Model.transactList.Add(new Transaction("1", 3, new DateTime(2014, 03, 12), AccountTransaction.RentalFee));
-            Model.transactList.Add(new Transaction("1", 3, new DateTime(2014, 03, 9), AccountTransaction.RentalFee));
-            Model.transactList.Add(new Transaction("2", 20, new DateTime(2013, 05, 21), AccountTransaction.MembershipFee));
-            Model.transactList.Add(new Transaction("2", 5, new DateTime(2014, 05, 7), AccountTransaction.LateReturnFee));
-            Model.customerList.Add(new Customer("name 1", "surname 1"));
-            Model.customerList.Add(new Customer("name2", "surname2"));
-            Model.customerList.Add(new Customer("name 1", "surname 2"));
-            Model.customerList.Add(new Customer("name2", "surname1"));
         }
 
         private void loadDatabaseToolStripMenuItem_Click(object sender, EventArgs e)

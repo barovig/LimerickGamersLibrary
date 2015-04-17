@@ -149,14 +149,14 @@
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -173,7 +173,7 @@
             // gamesViewToolStripMenuItem
             // 
             this.gamesViewToolStripMenuItem.Name = "gamesViewToolStripMenuItem";
-            this.gamesViewToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.gamesViewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gamesViewToolStripMenuItem.Text = "&Games";
             this.gamesViewToolStripMenuItem.Click += new System.EventHandler(this.gamesViewToolStripMenuItem_Click);
             // 
@@ -187,7 +187,7 @@
             // staffViewToolStripMenuItem2
             // 
             this.staffViewToolStripMenuItem2.Name = "staffViewToolStripMenuItem2";
-            this.staffViewToolStripMenuItem2.Size = new System.Drawing.Size(117, 22);
+            this.staffViewToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.staffViewToolStripMenuItem2.Text = "&Staff";
             this.staffViewToolStripMenuItem2.Click += new System.EventHandler(this.staffViewToolStripMenuItem2_Click);
             // 
@@ -206,12 +206,14 @@
             this.gameCatalogueToolStripMenuItem.Name = "gameCatalogueToolStripMenuItem";
             this.gameCatalogueToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.gameCatalogueToolStripMenuItem.Text = "&Game Catalogue";
+            this.gameCatalogueToolStripMenuItem.Click += new System.EventHandler(this.gameCatalogueToolStripMenuItem_Click);
             // 
             // overdueGamesToolStripMenuItem
             // 
             this.overdueGamesToolStripMenuItem.Name = "overdueGamesToolStripMenuItem";
             this.overdueGamesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.overdueGamesToolStripMenuItem.Text = "&Overdue Games";
+            this.overdueGamesToolStripMenuItem.Click += new System.EventHandler(this.overdueGamesToolStripMenuItem_Click);
             // 
             // accountTransactionsToolStripMenuItem
             // 
@@ -293,6 +295,7 @@
             this.reserveGanesBtn.TabIndex = 2;
             this.reserveGanesBtn.Text = "Reserve Games";
             this.reserveGanesBtn.UseVisualStyleBackColor = false;
+            this.reserveGanesBtn.Click += new System.EventHandler(this.reserveGanesBtn_Click);
             // 
             // issueGamesBtn
             // 
@@ -394,6 +397,7 @@
             this.catalogReportBtn.TabIndex = 1;
             this.catalogReportBtn.Text = "Game Catalogue Report";
             this.catalogReportBtn.UseVisualStyleBackColor = false;
+            this.catalogReportBtn.Click += new System.EventHandler(this.catalogReportBtn_Click);
             // 
             // editStaffBtn
             // 
@@ -411,6 +415,7 @@
             this.editStaffBtn.TabIndex = 0;
             this.editStaffBtn.Text = "Edit Staff Accounts";
             this.editStaffBtn.UseVisualStyleBackColor = false;
+            this.editStaffBtn.Click += new System.EventHandler(this.editStaffBtn_Click);
             // 
             // logoPicBox
             // 
