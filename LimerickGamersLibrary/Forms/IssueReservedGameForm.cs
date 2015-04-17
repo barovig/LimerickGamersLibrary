@@ -92,7 +92,7 @@ namespace LimerickGamersLibrary.Forms
             catch (Exception exc)
             {
                 // Do nothing if error happens
-                MessageBox.Show("Error: {0}", exc.Message);
+                //MessageBox.Show("Error: {0}", exc.Message);
             }
 
         }
