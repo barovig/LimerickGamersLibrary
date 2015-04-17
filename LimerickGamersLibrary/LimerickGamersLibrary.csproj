@@ -54,7 +54,7 @@
     <Compile Include="Class\Model.cs" />
     <Compile Include="Class\Order.cs" />
     <Compile Include="Class\Person.cs" />
-    <Compile Include="Class\ReserveOrder.cs" />
+    <Compile Include="Class\ReserveGames.cs" />
     <Compile Include="Class\Serializer.cs" />
     <Compile Include="Class\Staff.cs" />
     <Compile Include="Class\StockItem.cs" />

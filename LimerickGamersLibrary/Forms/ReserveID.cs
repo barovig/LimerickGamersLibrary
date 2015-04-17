@@ -73,30 +73,6 @@ namespace LimerickGamersLibrary
         }
 
 
-
-        private void IssueGameForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void IssueGameButton_Click(object sender, EventArgs e)
-        {
-
-            if (listView1.SelectedItems.Count == 0 && listView2.SelectedItems.Count == 0) return;
-
-
-            string selectedCustomerId = listView2.SelectedItems[0].SubItems[0].Text;
-
-            string selectedGameId = listView1.SelectedItems[0].SubItems[0].Text;
-
-            string stockId =
-            Model.stockList.Find(stock => stock.GameId == selectedGameId && stock.OnRent == false).ItemId;
-            ReserveGames game = new ReserveGames(DateTime.Now, selectedCustomerId, stockId);
-            Model.stockList.Find(stock => stock.ItemId == stockId).OnRent = true;
-
-        }
-
-
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -109,6 +85,35 @@ namespace LimerickGamersLibrary
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (listView1.SelectedItems.Count == 0 && listView2.SelectedItems.Count == 0) return;
+
+            try
+            {
+                string selectedCustomerId = listView2.SelectedItems[0].SubItems[0].Text;
+
+                string selectedGameId = listView1.SelectedItems[0].SubItems[0].Text;
+
+                if (
+                    Model.ordersList.Any(
+                        order => order.CustomerId == selectedCustomerId && order.DateReturned == default(DateTime)))
+                {
+                    MessageBox.Show("Cannon rent/reserve more than one item.");
+                    return;
+                }
+
+                string stockId =
+                Model.stockList.Find(stock => stock.GameId == selectedGameId && stock.OnRent == false).ItemId;
+                ReserveGames game = new ReserveGames(DateTime.Now, selectedCustomerId, stockId);
+                Model.stockList.Find(stock => stock.ItemId == stockId).OnRent = true;
+                Model.ordersList.Add(game);
+            }
+            catch (Exception exc)
+            {
+                // Do nothing
+                MessageBox.Show("Error: {0}", exc.Message);
+            }
+           
 
         }
     }
