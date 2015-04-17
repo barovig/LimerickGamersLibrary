@@ -38,6 +38,7 @@
             this.gameNameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PlatformCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.IssueGameButton = new System.Windows.Forms.Button();
+            this.issueReservedBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // customerDetailsList
@@ -116,7 +117,7 @@
             this.IssueGameButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.IssueGameButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
             this.IssueGameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IssueGameButton.Location = new System.Drawing.Point(719, 208);
+            this.IssueGameButton.Location = new System.Drawing.Point(722, 153);
             this.IssueGameButton.Name = "IssueGameButton";
             this.IssueGameButton.Size = new System.Drawing.Size(75, 50);
             this.IssueGameButton.TabIndex = 2;
@@ -124,12 +125,30 @@
             this.IssueGameButton.UseVisualStyleBackColor = true;
             this.IssueGameButton.Click += new System.EventHandler(this.IssueGameButton_Click);
             // 
+            // issueReservedBtn
+            // 
+            this.issueReservedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.issueReservedBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
+            this.issueReservedBtn.FlatAppearance.BorderSize = 3;
+            this.issueReservedBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
+            this.issueReservedBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(233)))), ((int)(((byte)(203)))));
+            this.issueReservedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.issueReservedBtn.Location = new System.Drawing.Point(722, 246);
+            this.issueReservedBtn.Name = "issueReservedBtn";
+            this.issueReservedBtn.Size = new System.Drawing.Size(75, 50);
+            this.issueReservedBtn.TabIndex = 3;
+            this.issueReservedBtn.Text = "Issue Reserved";
+            this.issueReservedBtn.UseVisualStyleBackColor = true;
+            this.issueReservedBtn.Click += new System.EventHandler(this.issueReservedBtn_Click);
+            // 
             // IssueGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(842, 473);
+            this.Controls.Add(this.issueReservedBtn);
             this.Controls.Add(this.IssueGameButton);
             this.Controls.Add(this.GameDetailsLis);
             this.Controls.Add(this.customerDetailsList);
@@ -154,5 +173,6 @@
         private System.Windows.Forms.ColumnHeader gameNameCol;
         private System.Windows.Forms.ColumnHeader PlatformCol;
         private System.Windows.Forms.Button IssueGameButton;
+        private System.Windows.Forms.Button issueReservedBtn;
     }
 }

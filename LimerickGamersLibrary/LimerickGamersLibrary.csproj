@@ -54,7 +54,7 @@
     <Compile Include="Class\Model.cs" />
     <Compile Include="Class\Order.cs" />
     <Compile Include="Class\Person.cs" />
-    <Compile Include="Class\ReserveGames.cs" />
+    <Compile Include="Class\ReserveOrder.cs" />
     <Compile Include="Class\Serializer.cs" />
     <Compile Include="Class\Staff.cs" />
     <Compile Include="Class\StockItem.cs" />
@@ -118,6 +118,12 @@
     </Compile>
     <Compile Include="Forms\IssueGameForm.Designer.cs">
       <DependentUpon>IssueGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssueReservedGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IssueReservedGameForm.Designer.cs">
+      <DependentUpon>IssueReservedGameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Overdue.cs">
       <SubType>Form</SubType>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IssueGameForm.resx">
       <DependentUpon>IssueGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IssueReservedGameForm.resx">
+      <DependentUpon>IssueReservedGameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Overdue.resx">
       <DependentUpon>Overdue.cs</DependentUpon>

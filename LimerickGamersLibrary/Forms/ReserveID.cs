@@ -104,7 +104,7 @@ namespace LimerickGamersLibrary
 
                 string stockId =
                 Model.stockList.Find(stock => stock.GameId == selectedGameId && stock.OnRent == false).ItemId;
-                ReserveGames game = new ReserveGames(DateTime.Now, selectedCustomerId, stockId);
+                ReserveOrder game = new ReserveOrder(DateTime.Now, selectedCustomerId, stockId);
                 Model.stockList.Find(stock => stock.ItemId == stockId).OnRent = true;
                 Model.ordersList.Add(game);
             }

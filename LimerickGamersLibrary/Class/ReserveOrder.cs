@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace LimerickGamersLibrary.Class
 {
     [Serializable]
-     public class ReserveGames : Order
+     public class ReserveOrder : Order
     {
         public DateTime DateReserved { set; get; }
 
-        public ReserveGames(DateTime reservedate, string custId, string itemId)
+        public ReserveOrder(DateTime reservedate, string custId, string itemId)
                         : base(custId, itemId)
         {
 

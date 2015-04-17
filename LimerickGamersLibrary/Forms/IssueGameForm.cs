@@ -117,5 +117,12 @@ namespace LimerickGamersLibrary.Forms
             }
             
         }
+
+        private void issueReservedBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            IssueReservedGameForm issueReserved = new IssueReservedGameForm();
+            issueReserved.Show();
+        }
     }
 }

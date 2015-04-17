@@ -22,7 +22,9 @@ namespace LimerickGamersLibrary
         {
             // Get orders not returned
             List<Order> onRentOrders =
-                Model.ordersList.FindAll(order => (order.DateReturned == default(DateTime) && (DateTime.Now - order.DateRented).TotalDays > 3)).ToList();
+                Model.ordersList.FindAll(order => (order.DateReturned == default(DateTime) && 
+                    (DateTime.Now - order.DateRented).TotalDays > 3) && 
+                    order.GetType() != typeof(ReserveOrder)).ToList();
 
             ListViewItem[] items = new ListViewItem[onRentOrders.Count];
             int i = 0;
