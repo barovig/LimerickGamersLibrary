@@ -122,14 +122,13 @@ namespace LimerickGamersLibrary.Forms
 
         private void customerLibraryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditCustomerForm editCustomer = new EditCustomerForm();
-            editCustomer.Show();
         }
 
         private void customersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ViewCustomerForm viewEditCustomerForm = new ViewCustomerForm();
             viewEditCustomerForm.Show();
+            this.Close();
         }
 
         private void editCustomerListView_SelectedIndexChanged(object sender, EventArgs e)
