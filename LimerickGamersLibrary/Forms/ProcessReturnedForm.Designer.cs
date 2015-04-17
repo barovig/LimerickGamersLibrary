@@ -204,6 +204,7 @@
             this.surnameCBox.Name = "surnameCBox";
             this.surnameCBox.Size = new System.Drawing.Size(104, 21);
             this.surnameCBox.TabIndex = 2;
+            this.surnameCBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.surnameCBox_KeyDown);
             // 
             // nameCBox
             // 
@@ -214,6 +215,7 @@
             this.nameCBox.Name = "nameCBox";
             this.nameCBox.Size = new System.Drawing.Size(104, 21);
             this.nameCBox.TabIndex = 1;
+            this.nameCBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nameCBox_KeyDown);
             // 
             // custSurnameLbl
             // 

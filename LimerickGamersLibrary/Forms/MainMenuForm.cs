@@ -166,5 +166,10 @@ namespace LimerickGamersLibrary.Forms
             ReserveID reserveGame = new ReserveID();
             reserveGame.Show();
         }
+
+        private void MainMenuForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm.Show();
+        }
     }
 }

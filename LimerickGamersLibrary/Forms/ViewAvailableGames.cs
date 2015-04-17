@@ -67,15 +67,6 @@ namespace LimerickGamersLibrary
 
         private void AddTestGames()
         {
-            Model.gameList.Add(new Game("shooter", "superdev", "lousy publisher", "FPS", "PC", "2015", EsrbRating.M));
-            Model.gameList.Add(new Game("rpg", "rpgdev", "rpg publisher", "RPG", "XOne", "2014", EsrbRating.E));
-            Model.gameList.Add(new Game("indie", "superdev", "rpg publisher", "Action", "PC", "2015", EsrbRating.M));
-            Model.gameList.Add(new Game("arcade", "arcade dev", "cool publisher", "Arcade", "PS4", "2013", EsrbRating.E10Plus));
-            Model.gameList.Add(new Game("shooter", "random dev", "random publisher", "FPS", "XOne", "2015", EsrbRating.A));
-            Model.stockList.Add(new StockItem("1"));
-            Model.stockList.Add(new StockItem("1"));
-            Model.stockList.Add(new StockItem("2"));
-            Model.stockList.Add(new StockItem("3", true));
 
         }
 

@@ -51,6 +51,7 @@
             this.SurnameCol});
             this.customerDetailsList.FullRowSelect = true;
             this.customerDetailsList.GridLines = true;
+            this.customerDetailsList.HideSelection = false;
             this.customerDetailsList.Location = new System.Drawing.Point(13, 42);
             this.customerDetailsList.MultiSelect = false;
             this.customerDetailsList.Name = "customerDetailsList";
@@ -83,6 +84,7 @@
             this.PlatformCol});
             this.GameDetailsLis.FullRowSelect = true;
             this.GameDetailsLis.GridLines = true;
+            this.GameDetailsLis.HideSelection = false;
             this.GameDetailsLis.Location = new System.Drawing.Point(359, 42);
             this.GameDetailsLis.MultiSelect = false;
             this.GameDetailsLis.Name = "GameDetailsLis";

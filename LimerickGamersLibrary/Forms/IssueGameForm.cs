@@ -48,20 +48,21 @@ namespace LimerickGamersLibrary.Forms
 
         private ListViewItem[] GenerateGameViewItems(List<Game> gameList)
         {
-            ListViewItem[] items = new ListViewItem[gameList.Count];
+            // Get all games available
+            List<Game> availableGames = Model.gameList.FindAll(
+                game => Model.stockList.Any(stock => stock.GameId == game.GameId && stock.OnRent == false))
+                .ToList();
+
             int i = 0;
-            foreach (string[] gameArray in gameList.Select(games => new string[]
+
+            ListViewItem[] items = new ListViewItem[availableGames.Count];
+            foreach (string[] gameArray in availableGames.Select(game => new string[]
             {
-                // Transaction ID
-                games.GameId,
-                // Customer Name
-                Model.gameList.Find(game => game.GameId == games.GameId).GameName,
-                // Customer Surname
-                Model.gameList.Find(game => game.GameId == games.GameId).Platform,
-                // Amount
+                game.GameId,
+                game.GameName,
+                game.Platform
             }))
             {
-                // Add ListItem created from string[] array to collection of items
                 items[i++] = new ListViewItem(gameArray);
             }
             return items;
@@ -76,20 +77,45 @@ namespace LimerickGamersLibrary.Forms
         {
             if (GameDetailsLis.SelectedItems.Count == 0 && customerDetailsList.SelectedItems.Count == 0) return;
 
-            // Get selected Customer Id
-            string selectedCustomerId = customerDetailsList.SelectedItems[0].SubItems[0].Text;
-            // Selected Game Id
-            string selectedGameId = GameDetailsLis.SelectedItems[0].SubItems[0].Text;
 
-            string stockId =
-            Model.stockList.Find(stock => stock.GameId == selectedGameId && stock.OnRent == false).ItemId;
-            Order issueGame = new Order(selectedCustomerId, stockId, DateTime.Now);
-            Model.stockList.Find(stock => stock.ItemId == stockId).OnRent = true;
-            ConfirmIssueGame confirmForm =
-                new ConfirmIssueGame(
-                    Model.customerList.Find(customer => customer.CustomerId == selectedCustomerId),
-                    Model.gameList.Find(game => game.GameId == selectedGameId));
-            confirmForm.ShowDialog();
+            try
+            {
+                // Get selected Customer Id
+                string selectedCustomerId = customerDetailsList.SelectedItems[0].SubItems[0].Text;
+                // Selected Game Id
+                string selectedGameId = GameDetailsLis.SelectedItems[0].SubItems[0].Text;
+
+                // Check if customer already rented a game
+                if (
+                    Model.ordersList.Any(
+                        order => order.CustomerId == selectedCustomerId && order.DateReturned == default(DateTime)))
+                {
+                    MessageBox.Show("Selected customer has a game rented. Cannot rent more than one game.");
+                    return;
+                }
+
+                string stockId =
+                    Model.stockList.Find(stock => stock.GameId == selectedGameId && stock.OnRent == false).ItemId;
+                // Create and add new order
+                Order issueGame = new Order(selectedCustomerId, stockId, DateTime.Now);
+                Model.ordersList.Add(issueGame);
+                // change stock item to OnRent
+                Model.stockList.Find(stock => stock.ItemId == stockId).OnRent = true;
+                // Create new transaction
+                Model.transactList.Add(new Transaction(selectedCustomerId, Fees.RentalFee, DateTime.Now, AccountTransaction.RentalFee));
+
+                ConfirmIssueGame confirmForm =
+                    new ConfirmIssueGame(
+                        Model.customerList.Find(customer => customer.CustomerId == selectedCustomerId),
+                        Model.gameList.Find(game => game.GameId == selectedGameId));
+                confirmForm.ShowDialog();
+
+            }
+            catch (Exception)
+            {
+                // Do nothing if error happens
+            }
+            
         }
     }
 }

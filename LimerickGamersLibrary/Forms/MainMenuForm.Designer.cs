@@ -125,14 +125,14 @@
             // gamesEditToolStripMenuItem
             // 
             this.gamesEditToolStripMenuItem.Name = "gamesEditToolStripMenuItem";
-            this.gamesEditToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gamesEditToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.gamesEditToolStripMenuItem.Text = "&Games";
             this.gamesEditToolStripMenuItem.Click += new System.EventHandler(this.gamesEditToolStripMenuItem_Click);
             // 
             // membersEditToolStripMenuItem
             // 
             this.membersEditToolStripMenuItem.Name = "membersEditToolStripMenuItem";
-            this.membersEditToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.membersEditToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.membersEditToolStripMenuItem.Text = "&Members";
             this.membersEditToolStripMenuItem.Click += new System.EventHandler(this.membersEditToolStripMenuItem_Click);
             // 
@@ -142,21 +142,21 @@
             this.deleteToolStripMenuItem,
             this.addToolStripMenuItem});
             this.staffEditToolStripMenuItem1.Name = "staffEditToolStripMenuItem1";
-            this.staffEditToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.staffEditToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.staffEditToolStripMenuItem1.Text = "&Staff";
             this.staffEditToolStripMenuItem1.Click += new System.EventHandler(this.staffEditToolStripMenuItem1_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -173,21 +173,21 @@
             // gamesViewToolStripMenuItem
             // 
             this.gamesViewToolStripMenuItem.Name = "gamesViewToolStripMenuItem";
-            this.gamesViewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gamesViewToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.gamesViewToolStripMenuItem.Text = "&Games";
             this.gamesViewToolStripMenuItem.Click += new System.EventHandler(this.gamesViewToolStripMenuItem_Click);
             // 
             // customersViewToolStripMenuItem1
             // 
             this.customersViewToolStripMenuItem1.Name = "customersViewToolStripMenuItem1";
-            this.customersViewToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.customersViewToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.customersViewToolStripMenuItem1.Text = "&Members";
             this.customersViewToolStripMenuItem1.Click += new System.EventHandler(this.customersViewToolStripMenuItem1_Click);
             // 
             // staffViewToolStripMenuItem2
             // 
             this.staffViewToolStripMenuItem2.Name = "staffViewToolStripMenuItem2";
-            this.staffViewToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.staffViewToolStripMenuItem2.Size = new System.Drawing.Size(117, 22);
             this.staffViewToolStripMenuItem2.Text = "&Staff";
             this.staffViewToolStripMenuItem2.Click += new System.EventHandler(this.staffViewToolStripMenuItem2_Click);
             // 
@@ -444,6 +444,7 @@
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "MainMenuForm";
             this.Text = "Limerick Gamers Game Library";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenuForm_FormClosed);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.manMenuGBox.ResumeLayout(false);

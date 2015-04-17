@@ -59,7 +59,6 @@ namespace LimerickGamersLibrary
             try
             {
                 Model.CopyFromSerialized(serializer.DeserializeStatic("database.dat"));
-
                 return true;
             }
             catch(Exception)

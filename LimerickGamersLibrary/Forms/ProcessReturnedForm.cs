@@ -75,15 +75,15 @@ namespace LimerickGamersLibrary.Forms
 
             try
             {
-                string custName = nameCBox.Text;
-                string custSurname = surnameCBox.Text;
+                string custName = nameCBox.Text.ToLower();
+                string custSurname = surnameCBox.Text.ToLower();
 
                 if (custName == "" || custSurname == "")
                     throw new Exception("Empty Fields");
-
-                string custId = Model.customerList.Find(cust => cust.Name == custName && cust.Surname == custSurname)
+                // Retrieve customer ID
+                string custId = Model.customerList.Find(cust => cust.Name.ToLower() == custName && cust.Surname.ToLower() == custSurname)
                     .CustomerId;
-                ListViewItem[] items = new ListViewItem[Model.ordersList.Count(order => order.CustomerId == custId && order.DateReturned == default(DateTime))];
+                ListViewItem[] items = new ListViewItem[1];
 
                 foreach (var order in onRentOrders)
                 {
@@ -165,8 +165,8 @@ namespace LimerickGamersLibrary.Forms
             {
                 Model.ordersList.Find(
                     order => order.StockItem == itemId && order.DateRented.ToShortDateString() == rentDateString).DateReturned = DateTime.Now;
-                // Create transaction here
-
+                // Change OnRent to false
+                Model.stockList.Find(stock => stock.ItemId == itemId).OnRent = false;
             }
 
             PopulateViewFromOrderList();
@@ -183,6 +183,18 @@ namespace LimerickGamersLibrary.Forms
         private void saveDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Extension.SaveDatabase();
+        }
+
+        private void nameCBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+                showCustOrdersBtn_Click(sender, e);
+        }
+
+        private void surnameCBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+                showCustOrdersBtn_Click(sender, e);
         }
     }
 }
