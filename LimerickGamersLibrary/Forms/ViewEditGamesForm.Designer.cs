@@ -177,20 +177,20 @@
             this.saveDatabaseToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Text = "&File";
             // 
             // loadDatabaseToolStripMenuItem
             // 
             this.loadDatabaseToolStripMenuItem.Name = "loadDatabaseToolStripMenuItem";
-            this.loadDatabaseToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.loadDatabaseToolStripMenuItem.Text = "Load Database";
+            this.loadDatabaseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadDatabaseToolStripMenuItem.Text = "&Load Database";
             this.loadDatabaseToolStripMenuItem.Click += new System.EventHandler(this.loadDatabaseToolStripMenuItem_Click);
             // 
             // saveDatabaseToolStripMenuItem
             // 
             this.saveDatabaseToolStripMenuItem.Name = "saveDatabaseToolStripMenuItem";
-            this.saveDatabaseToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.saveDatabaseToolStripMenuItem.Text = "Save Database";
+            this.saveDatabaseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveDatabaseToolStripMenuItem.Text = "&Save Database";
             this.saveDatabaseToolStripMenuItem.Click += new System.EventHandler(this.saveDatabaseToolStripMenuItem_Click);
             // 
             // editGameToolStripMenuItem
@@ -200,20 +200,20 @@
             this.stockItemsToolStripMenuItem});
             this.editGameToolStripMenuItem.Name = "editGameToolStripMenuItem";
             this.editGameToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.editGameToolStripMenuItem.Text = "Edit";
+            this.editGameToolStripMenuItem.Text = "&Edit";
             // 
             // gamesLibraryToolStripMenuItem
             // 
             this.gamesLibraryToolStripMenuItem.Name = "gamesLibraryToolStripMenuItem";
-            this.gamesLibraryToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.gamesLibraryToolStripMenuItem.Text = "Games Library";
+            this.gamesLibraryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gamesLibraryToolStripMenuItem.Text = "&Games Library";
             this.gamesLibraryToolStripMenuItem.Click += new System.EventHandler(this.gamesLibraryToolStripMenuItem_Click);
             // 
             // stockItemsToolStripMenuItem
             // 
             this.stockItemsToolStripMenuItem.Name = "stockItemsToolStripMenuItem";
-            this.stockItemsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.stockItemsToolStripMenuItem.Text = "Stock Items";
+            this.stockItemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stockItemsToolStripMenuItem.Text = "S&tock Items";
             this.stockItemsToolStripMenuItem.Click += new System.EventHandler(this.stockItemsToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
@@ -222,13 +222,13 @@
             this.stockToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Text = "&View";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stockToolStripMenuItem.Text = "S&tock";
             this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
             // statusStrip1

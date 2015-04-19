@@ -108,7 +108,7 @@ namespace LimerickGamersLibrary
                 Model.stockList.Find(stock => stock.ItemId == stockId).OnRent = true;
                 Model.ordersList.Add(game);
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 // Do nothing
             }

@@ -132,8 +132,9 @@
             // 
             // transactListView
             // 
-            this.transactListView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.transactListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.transactListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.custIdCol,
             this.nameCol,
@@ -320,6 +321,7 @@
             this.Controls.Add(this.transactReportMenuStrip);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(850, 500);
             this.Name = "TransactionsReportForm";
             this.Text = "Transactions Report";
             this.transactReportMenuStrip.ResumeLayout(false);

@@ -89,7 +89,7 @@ namespace LimerickGamersLibrary.Forms
                 confirmForm.ShowDialog();
 
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 // Do nothing if error happens
                 //MessageBox.Show("Error: {0}", exc.Message);

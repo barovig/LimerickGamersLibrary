@@ -117,7 +117,7 @@
             this.stockItemsToolStripMenuItem});
             this.editGameToolStripMenuItem.Name = "editGameToolStripMenuItem";
             this.editGameToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.editGameToolStripMenuItem.Text = "Edit";
+            this.editGameToolStripMenuItem.Text = "&Edit";
             // 
             // gamesLibraryToolStripMenuItem
             // 
@@ -138,13 +138,13 @@
             this.stockToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Text = "&View";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stockToolStripMenuItem.Text = "S&tock";
             this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
             // statusStrip1

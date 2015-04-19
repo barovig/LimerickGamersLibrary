@@ -56,8 +56,8 @@
             this.addStockItemBtn = new System.Windows.Forms.Button();
             this.deleteStockItemBtn = new System.Windows.Forms.Button();
             this.toggleRentBtn = new System.Windows.Forms.Button();
-            this.viewStockToolStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.viewStockToolStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.viewStockMenuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -82,20 +82,20 @@
             this.saveDatabaseToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Text = "&File";
             // 
             // loadDatabaseToolStripMenuItem
             // 
             this.loadDatabaseToolStripMenuItem.Name = "loadDatabaseToolStripMenuItem";
-            this.loadDatabaseToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.loadDatabaseToolStripMenuItem.Text = "Load Database";
+            this.loadDatabaseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadDatabaseToolStripMenuItem.Text = "&Load Database";
             this.loadDatabaseToolStripMenuItem.Click += new System.EventHandler(this.loadDatabaseToolStripMenuItem_Click);
             // 
             // saveDatabaseToolStripMenuItem
             // 
             this.saveDatabaseToolStripMenuItem.Name = "saveDatabaseToolStripMenuItem";
-            this.saveDatabaseToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.saveDatabaseToolStripMenuItem.Text = "Save Database";
+            this.saveDatabaseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveDatabaseToolStripMenuItem.Text = "&Save Database";
             this.saveDatabaseToolStripMenuItem.Click += new System.EventHandler(this.saveDatabaseToolStripMenuItem_Click);
             // 
             // editGameToolStripMenuItem
@@ -105,20 +105,20 @@
             this.stockItemsToolStripMenuItem});
             this.editGameToolStripMenuItem.Name = "editGameToolStripMenuItem";
             this.editGameToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.editGameToolStripMenuItem.Text = "Edit";
+            this.editGameToolStripMenuItem.Text = "&Edit";
             // 
             // gamesLibraryToolStripMenuItem
             // 
             this.gamesLibraryToolStripMenuItem.Name = "gamesLibraryToolStripMenuItem";
-            this.gamesLibraryToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.gamesLibraryToolStripMenuItem.Text = "Games Library";
+            this.gamesLibraryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gamesLibraryToolStripMenuItem.Text = "&Games Library";
             this.gamesLibraryToolStripMenuItem.Click += new System.EventHandler(this.gamesLibraryToolStripMenuItem_Click);
             // 
             // stockItemsToolStripMenuItem
             // 
             this.stockItemsToolStripMenuItem.Name = "stockItemsToolStripMenuItem";
-            this.stockItemsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.stockItemsToolStripMenuItem.Text = "Stock Items";
+            this.stockItemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stockItemsToolStripMenuItem.Text = "S&tock Items";
             this.stockItemsToolStripMenuItem.Click += new System.EventHandler(this.stockItemsToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
@@ -127,13 +127,13 @@
             this.stockToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Text = "&View";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stockToolStripMenuItem.Text = "St&ock";
             this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
             // gamesListView
@@ -315,14 +315,6 @@
             this.toggleRentBtn.MouseLeave += new System.EventHandler(this.toggleRentBtn_MouseLeave);
             this.toggleRentBtn.MouseHover += new System.EventHandler(this.toggleRentBtn_MouseHover);
             // 
-            // viewStockToolStrip
-            // 
-            this.viewStockToolStrip.Enabled = false;
-            this.viewStockToolStrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(101)))), ((int)(((byte)(9)))));
-            this.viewStockToolStrip.Name = "viewStockToolStrip";
-            this.viewStockToolStrip.Size = new System.Drawing.Size(149, 17);
-            this.viewStockToolStrip.Text = "Select game to view its stock.";
-            // 
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
@@ -332,6 +324,12 @@
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(842, 22);
             this.statusStrip1.TabIndex = 4;
+            // 
+            // viewStockToolStrip
+            // 
+            this.viewStockToolStrip.Name = "viewStockToolStrip";
+            this.viewStockToolStrip.Size = new System.Drawing.Size(149, 17);
+            this.viewStockToolStrip.Text = "Select game to view its stock.";
             // 
             // ViewEditStock
             // 
@@ -392,7 +390,7 @@
         private System.Windows.Forms.Button addStockItemBtn;
         private System.Windows.Forms.Button deleteStockItemBtn;
         private System.Windows.Forms.Button toggleRentBtn;
-        private System.Windows.Forms.ToolStripStatusLabel viewStockToolStrip;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel viewStockToolStrip;
     }
 }
